@@ -22,10 +22,16 @@
     </ItemGroup>
 
     <ItemGroup>
-      <None Update="Puzzle01.txt">
+      <None Update="Day01.txt">
         <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
       </None>
-      <None Update="Puzzle01_Example.txt">
+      <None Update="Day01_Example.txt">
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      </None>
+      <None Update="Day02_Example.txt">
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      </None>
+      <None Update="Day02.txt">
         <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
       </None>
     </ItemGroup>

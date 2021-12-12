@@ -9,11 +9,11 @@ using Xunit;
 
 namespace AdventOfCode2021;
 
-public class Tests
+public class Day01
 {
     [Theory]
-    [InlineData("Puzzle01_Example.txt", 7)]
-    [InlineData("Puzzle01.txt", 1121)]
+    [InlineData("Day01_Example.txt", 7)]
+    [InlineData("Day01.txt", 1121)]
     public async Task Day01_Part1(string inputPath, int result)
     {
         var values = await ReadToInts(inputPath);
@@ -21,8 +21,8 @@ public class Tests
     }
 
     [Theory]
-    [InlineData("Puzzle01_Example.txt", 5)]
-    [InlineData("Puzzle01.txt", 1065)]
+    [InlineData("Day01_Example.txt", 5)]
+    [InlineData("Day01.txt", 1065)]
     public async Task Day01_Part2(string inputPath, int result)
     {
         var values = await ReadToInts(inputPath);
