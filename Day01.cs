@@ -14,23 +14,23 @@ public class Day01
     [Theory]
     [InlineData("Day01_Example.txt", 7)]
     [InlineData("Day01.txt", 1121)]
-    public async Task Day01_Part1(string inputPath, int result)
+    public async Task Part1(string inputPath, int result)
     {
-        var values = await ReadToInts(inputPath);
+        var values = await ReadInput(inputPath);
         CountGreaterThanPrevious(values).Should().Be(result);
     }
 
     [Theory]
     [InlineData("Day01_Example.txt", 5)]
     [InlineData("Day01.txt", 1065)]
-    public async Task Day01_Part2(string inputPath, int result)
+    public async Task Part2(string inputPath, int result)
     {
-        var values = await ReadToInts(inputPath);
+        var values = await ReadInput(inputPath);
         var windows = values.ToWindows();
         CountGreaterThanPrevious(windows).Should().Be(result);
     }
 
-    private static async Task<int[]> ReadToInts(string inputPath)
+    private static async Task<int[]> ReadInput(string inputPath)
     {
         var lines = await File.ReadAllLinesAsync(inputPath);
         return lines.Select(int.Parse).ToArray();

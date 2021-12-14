@@ -7,9 +7,6 @@ using FluentAssertions;
 using Xunit;
 using Xunit.Abstractions;
 
-// ReSharper disable ParameterTypeCanBeEnumerable.Local
-// ReSharper disable ReturnTypeCanBeEnumerable.Global
-
 namespace AdventOfCode2021;
 
 public class Day02
@@ -24,9 +21,9 @@ public class Day02
     [Theory]
     [InlineData("Day02_Example.txt", 15, 10)]
     [InlineData("Day02.txt", 1931, 953)]
-    public async Task Day02_Part1(string inputPath, int expectedHorizontal, int expectedDepth)
+    public async Task Part1(string inputPath, int expectedHorizontal, int expectedDepth)
     {
-        var inputs = await ReadInputs(inputPath);
+        var inputs = await ReadInput(inputPath);
 
         var horizontal = 0;
         var depth = 0;
@@ -54,9 +51,9 @@ public class Day02
     [Theory]
     [InlineData("Day02_Example.txt", 15, 60)]
     [InlineData("Day02.txt", 1931, 894762)]
-    public async Task Day02_Part2(string inputPath, int expectedHorizontal, int expectedDepth)
+    public async Task Part2(string inputPath, int expectedHorizontal, int expectedDepth)
     {
-        var inputs = await ReadInputs(inputPath);
+        var inputs = await ReadInput(inputPath);
 
         var horizontal = 0;
         var depth = 0;
@@ -83,7 +80,7 @@ public class Day02
         _testOutputHelper.WriteLine((horizontal * depth).ToString());
     }
 
-    private static async Task<IEnumerable<Input>> ReadInputs(string inputPath)
+    private static async Task<IEnumerable<Input>> ReadInput(string inputPath)
     {
         var lines = await File.ReadAllLinesAsync(inputPath);
         return lines.Select(line =>
